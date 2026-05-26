@@ -1,0 +1,5 @@
+milestone-1/data/
+.omc/
+__pycache__/
+*.pyc
+*.pyo
