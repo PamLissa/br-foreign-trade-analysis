@@ -2,6 +2,22 @@
 
 **Alunas:** Pamella Lissa Sato Tamura (2254107) e Raquel de Oliveira (2399113)
 
+## Perguntas e Hipóteses
+
+### Perguntas
+
+1. Existem padrões sazonais nas exportações brasileiras ao longo dos meses de 2025 em relação ao volume exportado (`net_weight_kg`) e ao valor da exportação (`fob_value_usd`)?
+
+2. É possível classificar a via de transporte principal (`transport_route`) que será utilizada em uma operação de exportação com base nas características físicas da carga (`net_weight_kg`), localização geográfica de origem (`origin_state`) e o valor declarado (`fob_value_usd`)?
+
+
+### Hipóteses
+
+H1: O volume exportado (`net_weight_kg`) e o valor FOB (`fob_value_usd`) não se distribuem de forma uniforme ao longo do ano, apresentando picos de concentração significativos em meses específicos de 2025 devido à sazonalidade de commodities específicas (`NCM`).
+
+H2: As características físicas da carga (`net_weight_kg`) e a localização geográfica de origem (`origin_state`) são os preditores com maior peso estatístico para classificar a via de transporte (`transport_route`), superando o impacto do valor declarado (`fob_value_usd`).
+
+
 ## Estrutura
 
 ```
