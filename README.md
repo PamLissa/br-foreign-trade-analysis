@@ -32,6 +32,8 @@ br-foreign-trade-analysis/
 │   │   ├── exportacao_2025.csv
 │   │   ├── codigo_ncm.csv
 │   │   └── codigo_pais.csv
+│   └── results/                          # gerado ao executar o notebook
+│       └── cleaned_exports_2025.csv
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -77,12 +79,14 @@ python milestone-1/export_data_overview.py milestone-1/data/exportacao_2025.csv
 jupyter nbconvert --to notebook --execute --inplace milestone-2/notebooks/export_data_wrangling.ipynb
 ```
 
+O dataset limpo será gerado em `milestone-2/results/cleaned_exports_2025.csv`.
+
 ## Etapas do Projeto
 
 | Etapa | Descrição | Status |
 |---|---|---|
 | 1 | Escolha do dataset e definição do problema | Concluída |
-| 2 | Integração e limpeza dos dados | Em Andamento |
+| 2 | Integração e limpeza dos dados | Concluída |
 | 3 | Análise exploratória e consultas SQL | — |
 | 4 | Modelagem com Machine Learning | — |
 | 5 | Relatório e comunicação | — |
