@@ -1,5 +1,6 @@
 milestone-1/data/
 milestone-2/data/
+milestone-2/results/
 .omc/
 __pycache__/
 *.pyc
