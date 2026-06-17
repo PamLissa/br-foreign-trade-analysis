@@ -1,6 +1,4 @@
-# Exportações Brasileiras 2025 — Ciência de Dados
-
-**Alunas:** Pamella Lissa Sato Tamura (2254107) e Raquel de Oliveira (2399113)
+# Exportações Brasileiras 2025 - Ciência de Dados
 
 ## Perguntas e Hipóteses
 
@@ -34,6 +32,15 @@ br-foreign-trade-analysis/
 │   │   └── codigo_pais.csv
 │   └── results/                          # gerado ao executar o notebook
 │       └── cleaned_exports_2025.csv
+├── milestone-3/
+│   ├── notebooks/
+│   │   └── export_data_eda.ipynb         # análise exploratória e consultas SQL
+│   ├── data/                             # não versionado — ver Download abaixo
+│   │   ├── cleaned_exports_2025.csv      # copiar de milestone-2/results/
+│   │   └── codigo_vias.csv
+│   └── results/                          # gerado ao executar o notebook
+│       ├── exports_tidy.parquet
+│       └── *.png                         # gráficos das consultas e análises
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -56,6 +63,13 @@ Os arquivos de dados não são versionados. Baixe e salve conforme indicado:
 | Exportações 2025 | https://balanca.economia.gov.br/balanca/bd/comexstat-bd/ncm/EXP_2025.csv | `exportacao_2025.csv` |
 | Códigos NCM | https://balanca.economia.gov.br/balanca/bd/tabelas/NCM.csv | `codigo_ncm.csv` |
 | Códigos de Países | https://balanca.economia.gov.br/balanca/bd/tabelas/PAIS.csv | `codigo_pais.csv` |
+
+**Milestone 3** → `milestone-3/data/`
+
+| Arquivo | Download | Salvar como |
+|---|---|---|
+| Dataset limpo | copiar `milestone-2/results/cleaned_exports_2025.csv` | `cleaned_exports_2025.csv` |
+| Códigos de Vias | https://balanca.economia.gov.br/balanca/bd/tabelas/VIA.csv | `codigo_vias.csv` |
 
 ## Como executar
 
@@ -81,12 +95,20 @@ jupyter nbconvert --to notebook --execute --inplace milestone-2/notebooks/export
 
 O dataset limpo será gerado em `milestone-2/results/cleaned_exports_2025.csv`.
 
+### Milestone 3 — Análise exploratória e consultas SQL
+
+```bash
+jupyter nbconvert --to notebook --execute --inplace milestone-3/notebooks/export_data_eda.ipynb
+```
+
+Os gráficos e o dataset Parquet serão gerados em `milestone-3/results/`.
+
 ## Etapas do Projeto
 
 | Etapa | Descrição | Status |
 |---|---|---|
 | 1 | Escolha do dataset e definição do problema | Concluída |
 | 2 | Integração e limpeza dos dados | Concluída |
-| 3 | Análise exploratória e consultas SQL | — |
+| 3 | Análise exploratória e consultas SQL | Concluída |
 | 4 | Modelagem com Machine Learning | — |
 | 5 | Relatório e comunicação | — |
