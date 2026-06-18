@@ -41,6 +41,12 @@ br-foreign-trade-analysis/
 │   └── results/                          # gerado ao executar o notebook
 │       ├── exports_tidy.parquet
 │       └── *.png                         # gráficos das consultas e análises
+├── milestone-4/
+│   ├── notebooks/
+│   │   └── lightgbm_modeling.ipynb       # modelagem: classificação da via de transporte (LightGBM)
+│   ├── data/                             # não versionado (obter via milestone-3)
+│   │   └── exports_tidy.parquet          # copiar de milestone-3/results/
+│   └── results/                          # gerado ao executar o notebook
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -70,6 +76,14 @@ Os arquivos de dados não são versionados. Baixe e salve conforme indicado:
 |---|---|---|
 | Dataset limpo | copiar `milestone-2/results/cleaned_exports_2025.csv` | `cleaned_exports_2025.csv` |
 | Códigos de Vias | https://balanca.economia.gov.br/balanca/bd/tabelas/VIA.csv | `codigo_vias.csv` |
+
+**Milestone 4** → `milestone-4/data/`
+
+O dataset usado na modelagem é o Parquet gerado no milestone-3. Para obtê-lo, execute o milestone-3 e copie o arquivo gerado.
+
+| Arquivo | Origem | Salvar como |
+|---|---|---|
+| Dataset tidy | executar o milestone-3 e copiar `milestone-3/results/exports_tidy.parquet` | `exports_tidy.parquet` |
 
 ## Como executar
 
@@ -103,6 +117,22 @@ jupyter nbconvert --to notebook --execute --inplace milestone-3/notebooks/export
 
 Os gráficos e o dataset Parquet serão gerados em `milestone-3/results/`.
 
+### Milestone 4: Modelagem com Machine Learning
+
+Requer o dataset tidy em `milestone-4/data/exports_tidy.parquet`. Para obtê-lo, execute o milestone-3 e copie o arquivo gerado:
+
+```bash
+cp milestone-3/results/exports_tidy.parquet milestone-4/data/
+```
+
+Em seguida, execute o notebook:
+
+```bash
+jupyter nbconvert --to notebook --execute --inplace milestone-4/notebooks/lightgbm_modeling.ipynb
+```
+
+Os gráficos e métricas serão gerados em `milestone-4/results/`.
+
 ## Etapas do Projeto
 
 | Etapa | Descrição | Status |
@@ -110,5 +140,5 @@ Os gráficos e o dataset Parquet serão gerados em `milestone-3/results/`.
 | 1 | Escolha do dataset e definição do problema | Concluída |
 | 2 | Integração e limpeza dos dados | Concluída |
 | 3 | Análise exploratória e consultas SQL | Concluída |
-| 4 | Modelagem com Machine Learning | — |
-| 5 | Relatório e comunicação | — |
+| 4 | Modelagem com Machine Learning | Em andamento |
+| 5 | Relatório e comunicação | Não iniciada |
