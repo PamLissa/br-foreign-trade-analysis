@@ -43,10 +43,11 @@ br-foreign-trade-analysis/
 │       └── *.png                         # gráficos das consultas e análises
 ├── milestone-4/
 │   ├── notebooks/
-│   │   └── lightgbm_modeling.ipynb       # modelagem: classificação da via de transporte (LightGBM)
+│   │   ├── logreg_rf_modeling.ipynb      # modelagem: Regressão Logística e Random Forest
+│   │   └── lightgbm_modeling.ipynb       # modelagem: LightGBM + comparação final dos 3 modelos
 │   ├── data/                             # não versionado (obter via milestone-3)
 │   │   └── exports_tidy.parquet          # copiar de milestone-3/results/
-│   └── results/                          # gerado ao executar o notebook
+│   └── results/                          # gerado ao executar os notebooks (gráficos e métricas)
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -125,9 +126,10 @@ Requer o dataset tidy em `milestone-4/data/exports_tidy.parquet`. Para obtê-lo,
 cp milestone-3/results/exports_tidy.parquet milestone-4/data/
 ```
 
-Em seguida, execute o notebook:
+São dois notebooks: a Regressão Logística e o Random Forest em um, e o LightGBM (com a comparação final dos três modelos) no outro. Execute os dois:
 
 ```bash
+jupyter nbconvert --to notebook --execute --inplace milestone-4/notebooks/logreg_rf_modeling.ipynb
 jupyter nbconvert --to notebook --execute --inplace milestone-4/notebooks/lightgbm_modeling.ipynb
 ```
 
@@ -140,5 +142,5 @@ Os gráficos e métricas serão gerados em `milestone-4/results/`.
 | 1 | Escolha do dataset e definição do problema | Concluída |
 | 2 | Integração e limpeza dos dados | Concluída |
 | 3 | Análise exploratória e consultas SQL | Concluída |
-| 4 | Modelagem com Machine Learning | Em andamento |
-| 5 | Relatório e comunicação | Não iniciada |
+| 4 | Modelagem com Machine Learning | Concluída |
+| 5 | Relatório e comunicação | Em andamento |
