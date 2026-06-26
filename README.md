@@ -143,4 +143,4 @@ Os gráficos e métricas serão gerados em `milestone-4/results/`.
 | 2 | Integração e limpeza dos dados | Concluída |
 | 3 | Análise exploratória e consultas SQL | Concluída |
 | 4 | Modelagem com Machine Learning | Concluída |
-| 5 | Relatório e comunicação | Em andamento |
+| 5 | Relatório e comunicação | Concluída |
